@@ -58,7 +58,16 @@ There are three bash files in the repo. It is suggested that you use "build" bas
     ./clean
 
 to clean any generated files or binaries.
-NOTE:- please make sure that you run chmod command to make all the bash files executable, if they're not already. 
+
+NOTE:- please make sure that you run chmod command to make all the bash files executable, if they're not already. You can do so as:
+
+    chmod +x test
+
+OR
+
+    chmod 777 test
+
+Similar statments for build and clean.
 
 ## Usage
 
