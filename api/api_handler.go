@@ -70,7 +70,7 @@ func HandleCalculateFlightTracker(response http.ResponseWriter, request *http.Re
 	log.Println("HandleCalculateFlightTracker() ends")
 }
 
-// calculateFlightPath : Actual algorithm to track flight path. I generally keep it in separate file. ket here for sake of easiness to track.
+// calculateFlightPath : Actual algorithm to track flight path. I generally keep it in separate file. Kept here for sake of easiness to track.
 /*
 	Author		: Ravneet Singh
 	Function 	: calculateFlightPath - Calculates the actual flight path and returns a resonse and error if occured.
