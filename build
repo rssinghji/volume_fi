@@ -16,7 +16,7 @@ echo -e "\nSome Tests FAILED. Stopping the build. Please make sure all tests pas
 exit 9
 
 fi
-# Build the go binary, include race flag fr checking race conditions
+# Build the go binary, include race flag for checking race conditions
 echo -e "\nAll tests passed, building the code\n"
 go build -race -o volume_fi
 

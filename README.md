@@ -92,3 +92,5 @@ There are no special prerequisites for this code to run. Just need to include th
 ## Scripts Heirarchy
 
 The 'build' script calls 'test' script by default as we want to implement TDD as our standard practice. Now, the 'test' script call the 'clean' script within itself to clean all / any temporary files generated during testing. Make sure if you add your test cases and those generate some temporary files, you add them in 'clean' script to get them removed. Also, you can use both 'test' and 'clean' script individually according to your needs.
+
+NOTE :- The code has ample comments to make life easy.
