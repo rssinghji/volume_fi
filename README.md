@@ -21,6 +21,9 @@ This code is organized under $GOPATH/src/volume_fi. The packages are as follows:
         |-- main.go
         |-- go.mod
         |-- Readme.md
+        |-- build
+        |-- clean
+        |-- test
 
 ## Getting Started
 
