@@ -104,6 +104,7 @@ func calculateFlightPath(flightsList util.Request) (util.Response, error) {
 		if keyCount == 1 {
 			// We found the source. Store it and move on
 			source = key
+			break
 		}
 	}
 
