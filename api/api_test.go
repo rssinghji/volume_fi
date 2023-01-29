@@ -85,4 +85,10 @@ func TestCalculateEndpointWrongInput(test *testing.T) {
 	if http.StatusInternalServerError != writer.Code {
 		test.Error("expected", http.StatusInternalServerError, "got", writer.Code)
 	}
+
+	writer = testEndpoint(test, "POST", "/calculate", []byte(`{
+		"flight_list": [["A","B"],["C"]]}`))
+	if http.StatusInternalServerError != writer.Code {
+		test.Error("expected", http.StatusInternalServerError, "got", writer.Code)
+	}
 }
