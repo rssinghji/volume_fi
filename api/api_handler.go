@@ -39,9 +39,12 @@ func HandleCalculateFlightTracker(response http.ResponseWriter, request *http.Re
 		fmt.Fprintf(response, util.ErrorMessageWrongMethod)
 		return
 	}
+
 	flightList := util.Request{}
 	err := json.NewDecoder(request.Body).Decode(&flightList)
 	if err != nil || len(flightList.FlightList) == 0 {
+		log.Println(err)
+		response.WriteHeader(http.StatusBadRequest)
 		fmt.Fprintf(response, util.ErrorMessageBadrequest)
 		return
 	}
@@ -92,6 +95,9 @@ func calculateFlightPath(flightsList util.Request) (util.Response, error) {
 	flightMap := make(map[string]string)
 	for index := 0; index < len(flightsList.FlightList); index++ {
 		path := flights[index]
+		if len(path) == 0 || len(path) == 1 {
+			return result, fmt.Errorf("Incomplete or bad input")
+		}
 		flightMap[path[0]] = path[1]
 		overallString += "," + path[0] + "," + path[1]
 	}
