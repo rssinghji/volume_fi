@@ -35,6 +35,7 @@ type server struct {
 
 func (s *server) Calculate(ctx context.Context, in *pb.CalculatePathRequest) (*pb.CalculatePathResponse, error) {
 	return &pb.CalculatePathResponse{
+		// TODO - Need to implement proper server function for this. Also move this out to a separate folder probably.
 		Response: &pb.Response{FlightPath: []string{"SFO", "ATL", "GSO", "IND", "EWR"}},
 	}, nil
 }
@@ -49,6 +50,6 @@ func startGRPCServer() {
 	reflection.Register(grpcServer)
 	pb.RegisterFlightServer(grpcServer, &server{})
 	if err := grpcServer.Serve(listener); err != nil {
-		log.Fatalf("failed to serve: %v", err)
+		log.Fatalf("Failed to serve with GRPC server: %v", err)
 	}
 }
