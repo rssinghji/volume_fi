@@ -1,0 +1,14 @@
+{
+    "iteration_count": 25000,
+    "load_type": "linear",
+    "duration": 10,
+    "steps": [
+        {
+            "id": 1,
+            "url": "http://localhost:8080/calculate",
+            "method": "POST",
+            "payload": "{\"flight_list\":[[\"IND\", \"EWR\"], [\"SFO\", \"ATL\"], [\"GSO\", \"IND\"], [\"ATL\", \"GSO\"]]}",
+            "description": "config for load testing using ddosify"
+        }
+    ]
+}

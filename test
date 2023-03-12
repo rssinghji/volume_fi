@@ -10,3 +10,7 @@ rm -f coverage.out
 # Delete any temporary(tmp) files generated during testing and
 # Clean the repo so that you can make a fresh build after testing and push changes
 ./clean
+
+# load test with ddosify
+# follow ddosify installation and instructions here https://github.com/ddosify/ddosify
+# ddosify -t http://localhost:8080/calculate -n 10000 -d 10 -T 5 -m 'POST' -b '{"flight_list":[["IND", "EWR"], ["SFO", "ATL"], ["GSO", "IND"], ["ATL", "GSO"]]}'
