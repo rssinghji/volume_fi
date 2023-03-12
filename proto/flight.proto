@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "pb/";
+
+message Request {
+    repeated string flight_path = 1;
+}
+
+message Response {
+    repeated string flight_path = 1;
+}
+
+message CalculatePathRequest { repeated Request request = 1; }
+message CalculatePathResponse { Response response = 1; }
+service Flight {
+    rpc Calculate(CalculatePathRequest) returns (CalculatePathResponse) {}
+}
