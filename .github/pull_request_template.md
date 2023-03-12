@@ -4,4 +4,5 @@
 <Describe what your PR is for here>
 
 ### Check the box below if all steps pass successfully
-[] All tests passed
+- [ ] All tests passed
+- [ ] Reviews required
